@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Master Class Online Education Centre</title>
+
+    <meta name="description" content="Master Class Online Education Centre - Quality online education, learning resources and examination preparation.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+
+        /* HEADER */
+        header {
+            background: #0b3d91;
+            color: white;
+            padding: 18px 6%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #0b3d91, #1565c0);
+            color: white;
+            padding: 100px 6%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 6vw, 60px);
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            color: #ffd166;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
+            background: #ffd166;
+            color: #172554;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: white;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 70px 6%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #0b3d91;
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 40px;
+        }
+
+        /* COURSES */
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .course-card {
+            padding: 30px;
+            border-radius: 12px;
+            background: #f4f7fb;
+            border: 1px solid #e1e7ef;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .course-card h3 {
+            color: #0b3d91;
+            margin-bottom: 10px;
+        }
+
+        /* WHY US */
+        .why {
+            background: #f4f7fb;
+        }
+
+        .features {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .feature {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature h3 {
+            color: #0b3d91;
+            margin-bottom: 10px;
+        }
+
+        /* EXAMS */
+        .exam-list {
+            max-width: 800px;
+            margin: auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        .exam {
+            padding: 20px;
+            background: #eef4ff;
+            border-left: 5px solid #0b3d91;
+            border-radius: 6px;
+        }
+
+        /* ABOUT */
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #0b3d91;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #071f49;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 70px 6%;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">Master Class</div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#exams">Exams</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <h1>Master Class Online Education Centre</h1>
+
+        <h2>Learn, Understand, Excel.</h2>
+
+        <p>
+            Your trusted destination for quality online education,
+            learning resources and effective examination preparation.
+        </p>
+
+        <a href="#courses" class="button">Explore Our Courses</a>
+    </section>
+
+    <!-- WELCOME -->
+    <section>
+        <h2 class="section-title">Welcome to Master Class</h2>
+
+        <p class="section-intro">
+            We provide engaging and accessible lessons designed to make
+            learning easier, clearer and more enjoyable. Whether you are
+            building a strong academic foundation or preparing for an
+            important examination, we are here to support you.
+        </p>
+    </section>
+
+    <!-- COURSES -->
+    <section id="courses" class="why">
+        <h2 class="section-title">Our Courses</h2>
+
+        <p class="section-intro">
+            Explore subjects designed to help students understand concepts
+            and develop the confidence needed to succeed.
+        </p>
+
+        <div class="courses">
+
+            <div class="course-card">
+                <h3>Physics</h3>
+                <p>Understand physical concepts, principles and problem-solving techniques.</p>
+            </div>
+
+            <div class="course-card">
+                <h3>Chemistry</h3>
+                <p>Learn chemistry concepts through clear explanations and practical examples.</p>
+            </div>
+
+            <div class="course-card">
+                <h3>Biology</h3>
+                <p>Build a strong understanding of living organisms and biological processes.</p>
+            </div>
+
+            <div class="course-card">
+                <h3>Mathematics</h3>
+                <p>Develop mathematical skills through step-by-step explanations and practice.</p>
+            </div>
+
+            <div class="course-card">
+                <h3>Further Mathematics</h3>
+                <p>Explore advanced mathematical concepts and problem-solving methods.</p>
+            </div>
+
+            <div class="course-card">
+                <h3>Basic Science</h3>
+                <p>Build a strong foundation in essential science concepts.</p>
+            </div>
+
+            <div class="course-card">
+                <h3>English</h3>
+                <p>Improve grammar, communication, comprehension and academic writing skills.</p>
+            </div>
+
+            <div class="course-card">
+                <h3>Engineering Courses</h3>
+                <p>Learn subjects such as Thermodynamics, Fluid Mechanics and Engineering Mathematics.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section>
+        <h2 class="section-title">Why Learn With Us?</h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>Clear Lessons</h3>
+                <p>Complex topics are explained in a simple and understandable way.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Learn Anywhere</h3>
+                <p>Access learning materials online and study at your own pace.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Exam Preparation</h3>
+                <p>Prepare effectively using lessons, practice questions and revision resources.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Student Focused</h3>
+                <p>Our goal is to help learners understand, improve and succeed.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXAMS -->
+    <section id="exams" class="why">
+        <h2 class="section-title">Examination Preparation</h2>
+
+        <p class="section-intro">
+            Prepare confidently for important examinations with structured
+            lessons and revision resources.
+        </p>
+
+        <div class="exam-list">
+
+            <div class="exam">
+                <strong>WAEC</strong> — Comprehensive subject revision and practice.
+            </div>
+
+            <div class="exam">
+                <strong>NECO</strong> — Preparation and examination practice.
+            </div>
+
+            <div class="exam">
+                <strong>JAMB</strong> — Subject preparation and practice questions.
+            </div>
+
+            <div class="exam">
+                <strong>University Examinations</strong> — Academic support and revision.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2 class="section-title">About Master Class</h2>
+
+        <div class="about-content">
+            <p>
+                Master Class Online Education Centre is an educational
+                platform created to make quality learning more accessible.
+                We believe that every difficult concept can become easier
+                when it is explained clearly and practically.
+            </p>
+
+            <br>
+
+            <p>
+                Our platform is designed to support students at different
+                stages of their academic journey, from building foundational
+                knowledge to preparing for major examinations.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">Contact Us</h2>
+
+        <p>Ready to start learning?</p>
+
+        <p>Contact Master Class Online Education Centre.</p>
+
+        <a href="mailto:masterclass@example.com" class="button">
+            Send Us an Email
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Master Class Online Education Centre.</p>
+        <p>Learn, Understand, Excel.</p>
+    </footer>
+
+</body>
+              </html>
