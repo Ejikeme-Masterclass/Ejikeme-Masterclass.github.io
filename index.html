@@ -2,19 +2,24 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Master Class Online Education Centre - Learn, Understand, Excel. Quality online education, courses and examination preparation.">
+        content="Master Class Online Education Centre - Learn, Understand, Excel. Quality online education, courses, examination preparation, student registration and teacher recruitment.">
 
     <meta name="keywords"
-        content="Master Class, online education, Nigeria, Physics, Chemistry, Biology, Mathematics, English, Engineering, WAEC, NECO, JAMB">
+        content="Master Class, online education, Nigeria, Physics, Chemistry, Biology, Mathematics, English, Engineering, WAEC, NECO, JAMB, student registration, teacher recruitment">
 
-    <meta name="author" content="Master Class Online Education Centre">
+    <meta name="author"
+        content="Master Class Online Education Centre">
 
-    <title>Master Class Online Education Centre</title>
+    <title>
+        Master Class Online Education Centre
+    </title>
+
 
     <style>
 
@@ -462,6 +467,11 @@
             gap: 22px;
         }
 
+        .course-link {
+            display: block;
+            height: 100%;
+        }
+
         .course-card {
             background: white;
             border: 1px solid var(--border);
@@ -470,6 +480,7 @@
             transition: 0.3s;
             position: relative;
             overflow: hidden;
+            height: 100%;
         }
 
         .course-card::before {
@@ -483,13 +494,13 @@
             transition: 0.3s;
         }
 
-        .course-card:hover {
+        .course-link:hover .course-card {
             transform: translateY(-7px);
             box-shadow: 0 18px 40px rgba(6,43,99,0.12);
             border-color: #dce5f3;
         }
 
-        .course-card:hover::before {
+        .course-link:hover .course-card::before {
             width: 100%;
         }
 
@@ -515,6 +526,14 @@
         .course-card p {
             color: var(--muted);
             font-size: 14px;
+        }
+
+        .click-hint {
+            display: block;
+            margin-top: 15px;
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: bold;
         }
 
 
@@ -610,6 +629,76 @@
         .exam-card p {
             color: #c7d7ed;
             font-size: 13px;
+        }
+
+
+        /* =========================
+           FORMS
+        ========================== */
+
+        .forms {
+            background: white;
+        }
+
+        .forms-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .form-card {
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 35px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .form-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(6,43,99,0.12);
+        }
+
+        .form-icon {
+            width: 65px;
+            height: 65px;
+            background: var(--light-blue);
+            color: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 18px;
+        }
+
+        .form-card h3 {
+            color: var(--navy);
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .form-card p {
+            color: var(--muted);
+            margin-bottom: 22px;
+        }
+
+        .form-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--navy);
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .form-btn:hover {
+            background: var(--blue);
+            transform: translateY(-2px);
         }
 
 
@@ -960,7 +1049,8 @@
             .course-grid,
             .exam-grid,
             .why-grid,
-            .contact-grid {
+            .contact-grid,
+            .forms-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1046,8 +1136,6 @@
 
     <div class="container navbar">
 
-        <!-- Home/Logo now returns to the clean homepage URL -->
-
         <a href="./" class="brand">
 
             <div class="brand-icon">
@@ -1084,7 +1172,6 @@
         >
 
             <li>
-                <!-- Clean homepage link -->
                 <a href="./">
                     Home
                 </a>
@@ -1099,6 +1186,12 @@
             <li>
                 <a href="#exams">
                     Exam Prep
+                </a>
+            </li>
+
+            <li>
+                <a href="#forms">
+                    Forms
                 </a>
             </li>
 
@@ -1402,112 +1495,182 @@
 
             <!-- PHYSICS -->
 
-            <div class="course-card">
+            <a
+                href="physics-curriculum.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="course-link"
+            >
 
-                <div class="course-icon">
-                    ⚛
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        ⚛
+                    </div>
+
+                    <h3>
+                        Physics
+                    </h3>
+
+                    <p>
+
+                        Understand the principles of matter,
+                        energy, motion, forces, electricity and more.
+
+                    </p>
+
+                    <span class="click-hint">
+                        View Physics Course Content →
+                    </span>
+
                 </div>
 
-                <h3>
-                    Physics
-                </h3>
+            </a>
 
-                <p>
-
-                    Understand the principles of matter,
-                    energy, motion, forces, electricity and more.
-
-                </p>
-
-            </div>
 
 
             <!-- CHEMISTRY -->
 
-            <div class="course-card">
+            <a
+                href="chemistry-curriculum.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="course-link"
+            >
 
-                <div class="course-icon">
-                    🧪
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        🧪
+                    </div>
+
+                    <h3>
+                        Chemistry
+                    </h3>
+
+                    <p>
+
+                        Learn chemical concepts, reactions,
+                        calculations and laboratory principles.
+
+                    </p>
+
+                    <span class="click-hint">
+                        View Chemistry Course Content →
+                    </span>
+
                 </div>
 
-                <h3>
-                    Chemistry
-                </h3>
+            </a>
 
-                <p>
-
-                    Learn chemical concepts, reactions,
-                    calculations and laboratory principles.
-
-                </p>
-
-            </div>
 
 
             <!-- BIOLOGY -->
 
-            <div class="course-card">
+            <a
+                href="biology-curriculum.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="course-link"
+            >
 
-                <div class="course-icon">
-                    🧬
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        🧬
+                    </div>
+
+                    <h3>
+                        Biology
+                    </h3>
+
+                    <p>
+
+                        Explore life processes, organisms,
+                        genetics, ecology and human biology.
+
+                    </p>
+
+                    <span class="click-hint">
+                        View Biology Course Content →
+                    </span>
+
                 </div>
 
-                <h3>
-                    Biology
-                </h3>
+            </a>
 
-                <p>
-
-                    Explore life processes, organisms,
-                    genetics, ecology and human biology.
-
-                </p>
-
-            </div>
 
 
             <!-- MATHEMATICS -->
 
-            <div class="course-card">
+            <a
+                href="mathematics-curriculum.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="course-link"
+            >
 
-                <div class="course-icon">
-                    ∑
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        ∑
+                    </div>
+
+                    <h3>
+                        Mathematics
+                    </h3>
+
+                    <p>
+
+                        Develop strong problem-solving skills
+                        through clear mathematical explanations.
+
+                    </p>
+
+                    <span class="click-hint">
+                        View Mathematics Course Content →
+                    </span>
+
                 </div>
 
-                <h3>
-                    Mathematics
-                </h3>
+            </a>
 
-                <p>
-
-                    Develop strong problem-solving skills
-                    through clear mathematical explanations.
-
-                </p>
-
-            </div>
 
 
             <!-- FURTHER MATHEMATICS -->
 
-            <div class="course-card">
+            <a
+                href="further-mathematics-curriculum.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="course-link"
+            >
 
-                <div class="course-icon">
-                    ∫
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        ∫
+                    </div>
+
+                    <h3>
+                        Further Mathematics
+                    </h3>
+
+                    <p>
+
+                        Study advanced mathematical concepts
+                        for deeper academic understanding.
+
+                    </p>
+
+                    <span class="click-hint">
+                        View Further Mathematics Content →
+                    </span>
+
                 </div>
 
-                <h3>
-                    Further Mathematics
-                </h3>
+            </a>
 
-                <p>
-
-                    Study advanced mathematical concepts
-                    for deeper academic understanding.
-
-                </p>
-
-            </div>
 
 
             <!-- BASIC SCIENCE -->
@@ -1532,49 +1695,77 @@
             </div>
 
 
+
             <!-- ENGLISH -->
 
-            <div class="course-card">
+            <a
+                href="english-curriculum.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="course-link"
+            >
 
-                <div class="course-icon">
-                    A
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        A
+                    </div>
+
+                    <h3>
+                        English
+                    </h3>
+
+                    <p>
+
+                        Improve grammar, communication,
+                        comprehension and effective writing skills.
+
+                    </p>
+
+                    <span class="click-hint">
+                        View English Course Content →
+                    </span>
+
                 </div>
 
-                <h3>
-                    English
-                </h3>
+            </a>
 
-                <p>
-
-                    Improve grammar, communication,
-                    comprehension and effective writing skills.
-
-                </p>
-
-            </div>
 
 
             <!-- ENGINEERING -->
 
-            <div class="course-card">
+            <a
+                href="second-year-course-content.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="course-link"
+            >
 
-                <div class="course-icon">
-                    ⚙
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        ⚙
+                    </div>
+
+                    <h3>
+                        Engineering
+                    </h3>
+
+                    <p>
+
+                        Learn engineering subjects including
+                        Thermodynamics, Fluid Mechanics and
+                        Engineering Mathematics.
+
+                    </p>
+
+                    <span class="click-hint">
+                        View Engineering Course Content →
+                    </span>
+
                 </div>
 
-                <h3>
-                    Engineering
-                </h3>
-
-                <p>
-
-                    Learn engineering subjects including
-                    Thermodynamics, Fluid Mechanics and
-                    Engineering Mathematics.
-
-                </p>
-
-            </div>
+            </a>
 
         </div>
 
@@ -1776,8 +1967,6 @@
         <div class="exam-grid">
 
 
-            <!-- WAEC -->
-
             <div class="exam-card">
 
                 <span>
@@ -1797,8 +1986,6 @@
 
             </div>
 
-
-            <!-- NECO -->
 
             <div class="exam-card">
 
@@ -1820,8 +2007,6 @@
             </div>
 
 
-            <!-- JAMB -->
-
             <div class="exam-card">
 
                 <span>
@@ -1842,8 +2027,6 @@
             </div>
 
 
-            <!-- SECONDARY & UNIVERSITY -->
-
             <div class="exam-card">
 
                 <span>
@@ -1858,6 +2041,104 @@
                     Academic support for secondary school
                     and university-level subjects.
                 </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FORMS
+========================== -->
+
+<section
+    class="forms"
+    id="forms"
+>
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                ONLINE FORMS
+            </div>
+
+            <h2>
+                Get Started With Master Class
+            </h2>
+
+            <p>
+                Complete the appropriate form to register as a
+                student or apply to join our teaching team.
+            </p>
+
+        </div>
+
+
+        <div class="forms-grid">
+
+
+            <!-- STUDENT REGISTRATION -->
+
+            <div class="form-card">
+
+                <div class="form-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Student's Registration Form
+                </h3>
+
+                <p>
+                    Register with Master Class Online Education
+                    Centre and begin your learning journey.
+                </p>
+
+                <a
+                    href="https://whatsform.com/ykdo72"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="form-btn"
+                >
+                    Register as a Student →
+                </a>
+
+            </div>
+
+
+
+            <!-- TEACHER RECRUITMENT -->
+
+            <div class="form-card">
+
+                <div class="form-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>
+                    Teachers Recruitment Form
+                </h3>
+
+                <p>
+                    Interested in joining our teaching team?
+                    Complete the teacher recruitment form.
+                </p>
+
+                <a
+                    href="https://whatsform.com/QxyaBq"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="form-btn"
+                >
+                    Apply as a Teacher →
+                </a>
 
             </div>
 
@@ -2055,13 +2336,15 @@
                 </h3>
 
                 <p>
+
                     <a
-                        href="https://wa.me/2348038425041"
+                        href="https://wa.me/2348116131075"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        0803 842 5041
+                        08116131075
                     </a>
+
                 </p>
 
             </div>
@@ -2088,7 +2371,7 @@
         </div>
 
 
-        <!-- Direct Contact Details -->
+        <!-- DIRECT CONTACT DETAILS -->
 
         <div
             style="
@@ -2104,11 +2387,11 @@
             <p style="margin-bottom:10px;">
 
                 <a
-                    href="https://wa.me/2348038425041"
+                    href="https://wa.me/2348116131075"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    0803 842 5041
+                    08116131075
                 </a>
 
             </p>
@@ -2181,43 +2464,39 @@
                 <ul>
 
                     <li>
-
                         <a href="./">
                             Home
                         </a>
-
                     </li>
 
                     <li>
-
                         <a href="#courses">
                             Courses
                         </a>
-
                     </li>
 
                     <li>
-
                         <a href="#exams">
                             Exam Preparation
                         </a>
-
                     </li>
 
                     <li>
+                        <a href="#forms">
+                            Registration & Recruitment
+                        </a>
+                    </li>
 
+                    <li>
                         <a href="#about">
                             About
                         </a>
-
                     </li>
 
                     <li>
-
                         <a href="#contact">
                             Contact
                         </a>
-
                     </li>
 
                 </ul>
@@ -2234,31 +2513,57 @@
                 <ul>
 
                     <li>
-                        <a href="#courses">
+                        <a href="physics-curriculum.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Physics
                         </a>
                     </li>
 
                     <li>
-                        <a href="#courses">
+                        <a href="chemistry-curriculum.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Chemistry
                         </a>
                     </li>
 
                     <li>
-                        <a href="#courses">
+                        <a href="biology-curriculum.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Biology
                         </a>
                     </li>
 
                     <li>
-                        <a href="#courses">
+                        <a href="mathematics-curriculum.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Mathematics
                         </a>
                     </li>
 
                     <li>
-                        <a href="#courses">
+                        <a href="further-mathematics-curriculum.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Further Mathematics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="english-curriculum.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            English
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="second-year-course-content.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Engineering
                         </a>
                     </li>
@@ -2297,7 +2602,7 @@
 
 <a
     class="whatsapp"
-    href="https://wa.me/2348038425041"
+    href="https://wa.me/2348116131075"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Contact us on WhatsApp"
@@ -2352,4 +2657,4 @@
 
 </body>
 
-            </html>
+    </html>
